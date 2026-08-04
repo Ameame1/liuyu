@@ -187,34 +187,52 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
+/* 时间轴：贯穿的竖线 + iOS 日历风格日期卡片 */
+.pub { position: relative; }
+
+.pub::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 6px;
+  bottom: -1.35rem;
+  width: 2px;
+  background: #ececec;
+}
+
+.pub:last-child::before { display: none; }
+
 .cal {
-  width: 56px;
+  position: relative;
+  z-index: 1;
+  width: 54px;
   flex-shrink: 0;
-  border: 1px solid #dddddd;
-  border-radius: 8px;
+  align-self: flex-start;
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+  border-radius: 12px;
   overflow: hidden;
   text-align: center;
-  margin-top: .15rem;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+  margin-top: .1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .10);
 }
 
 .cal-m {
   display: block;
-  background: #1772d0;
-  color: #ffffff;
-  font-size: .68rem;
-  letter-spacing: .1em;
+  color: #e8443a;
+  font-size: .6rem;
+  font-weight: 700;
+  letter-spacing: .14em;
   text-transform: uppercase;
-  padding: .14rem 0 .1rem;
+  padding: .34rem 0 0;
 }
 
 .cal-y {
   display: block;
-  background: #ffffff;
-  color: #333333;
-  font-size: .95rem;
+  color: #1d1d1f;
+  font-size: 1rem;
   font-weight: 700;
-  padding: .28rem 0 .3rem;
+  padding: .02rem 0 .34rem;
   font-variant-numeric: tabular-nums;
 }
 
@@ -263,8 +281,9 @@ footer {
   .menu a { margin-left: 1rem; }
   .pub { gap: .9rem; }
   .thumb { width: 96px; height: 63px; }
-  .cal { width: 48px; }
-  .cal-y { font-size: .85rem; }
+  .cal { width: 48px; border-radius: 10px; }
+  .cal-y { font-size: .88rem; }
+  .pub::before { left: 24px; }
   .cvlist .logo { padding-right: .6rem; }
   .cvlist .logo img { width: 64px; height: 28px; }
   .cvlist .logo img.sq { width: 28px; margin-right: .2rem; }
