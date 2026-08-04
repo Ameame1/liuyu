@@ -8,13 +8,48 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a class="brand" href="#">Yu Liu</a>
+    <nav class="menu">
+      <a href="#about">Home</a>
+      <!-- TODO: News/Publications 栏目恢复后加导航项 -->
+      <a href="#education">Education</a>
+      <a href="mailto:liuyu@iie.ac.cn">Contact</a>
+    </nav>
+  </div>
+</header>
+
 <main class="page">
 
-  <!-- ======================= Header / Bio ======================= -->
-  <header class="top">
-    <div class="intro">
-      <h1>Yu Liu <span class="cn">刘煜</span></h1>
+  <!-- ======================= 左侧名片栏 ======================= -->
+  <aside class="side">
+    <img class="portrait" src="assets/LY.jpg" alt="Portrait of Yu Liu">
+    <h1>Yu Liu</h1>
+    <div class="cn">刘煜</div>
+    <ul class="facts">
+      <li>Ph.D. student @ IIE, CAS</li>
+      <li>Advised by Prof. Yanbing Liu</li>
+      <li>Beijing, China</li>
+    </ul>
+    <div class="btns">
+      <a href="mailto:liuyu@iie.ac.cn">✉&nbsp; liuyu@iie.ac.cn</a>
+      <a href="https://openreview.net/profile?id=~Yu_Liu93">OpenReview</a>
+      <a href="https://github.com/Ameame1">GitHub</a>
+      <!-- TODO: 拿到真实 URL / 文件后恢复下面几个链接
+      <a href="https://scholar.google.com/">Google Scholar</a>
+      <a href="https://orcid.org/">ORCID</a>
+      <a href="assets/cv.pdf">CV</a>
+      -->
+    </div>
+  </aside>
 
+  <!-- ======================= 右侧内容区 ======================= -->
+  <div class="content">
+
+    <section id="about">
+      <h2>About</h2>
       <p>
         I am a Ph.D. student at the <strong>Institute of Information
         Engineering, Chinese Academy of Sciences</strong> (IIE, CAS),
@@ -22,77 +57,59 @@
         <strong>AI agents</strong>, <strong>data mining</strong>, and
         <strong>AI4Science</strong>.
       </p>
+    </section>
 
-      <nav class="links">
-        <a href="mailto:liuyu@iie.ac.cn">Email</a>
-        <a href="https://openreview.net/profile?id=~Yu_Liu93">OpenReview</a>
-        <a href="https://github.com/Ameame1">GitHub</a>
-        <!-- TODO: 拿到真实 URL / 文件后恢复下面几个链接
-        <a href="https://scholar.google.com/">Google Scholar</a>
-        <a href="https://orcid.org/">ORCID</a>
-        <a href="assets/cv.pdf">CV</a>
-        -->
+    <!-- ======================= News（有真实动态后恢复） =======================
+    <section id="news">
+      <h2>News</h2>
+      <table class="news">
+        <tr><td class="date">Jun 2026</td><td>TODO</td></tr>
+      </table>
+    </section>
+    -->
 
-      </nav>
-    </div>
-
-    <img class="portrait" src="assets/LY.jpg" alt="Portrait of Yu Liu">
-  </header>
-
-  <!-- ======================= News（有真实动态后恢复） =======================
-  <section>
-    <h2>News</h2>
-    <table class="news">
-      <tr><td class="date">Jun 2026</td><td>TODO</td></tr>
-    </table>
-  </section>
-  -->
-
-
-  <!-- ======================= Publications（拿到真实论文列表后恢复；每篇一个 .pub 块，缩略图放 assets/pubs/） =======================
-  <section>
-    <h2>Publications</h2>
-    <div class="pub">
-      <img class="thumb" src="assets/pubs/thumb-placeholder.svg" alt="">
-      <div class="meta">
-        <div class="title">TODO 论文标题</div>
-        <div class="authors"><span class="me">Yu Liu</span>, Coauthors</div>
-        <div class="venue">Venue, Year</div>
-        <div class="paperlinks"><a href="#">paper</a> / <a href="#">code</a></div>
+    <!-- ======================= Publications（拿到真实论文列表后恢复；每篇一个 .pub 块，缩略图放 assets/pubs/） =======================
+    <section id="publications">
+      <h2>Publications</h2>
+      <div class="pub">
+        <img class="thumb" src="assets/pubs/thumb-placeholder.svg" alt="">
+        <div class="meta">
+          <div class="title">TODO 论文标题</div>
+          <div class="authors"><span class="me">Yu Liu</span>, Coauthors</div>
+          <div class="venue">Venue, Year</div>
+          <div class="paperlinks"><a href="#">paper</a> / <a href="#">code</a></div>
+        </div>
       </div>
-    </div>
-  </section>
-  -->
+    </section>
+    -->
 
+    <section id="education">
+      <h2>Education</h2>
+      <table class="cvlist">
+        <tr>
+          <td class="logo"><a href="https://english.ucas.ac.cn/" target="_blank" rel="noopener"><img class="sq" src="assets/logos/ucas.svg" alt="University of Chinese Academy of Sciences"></a><a href="https://www.iie.ac.cn/" target="_blank" rel="noopener"><img class="sq" src="assets/logos/iie.png" alt="Institute of Information Engineering, CAS"></a></td>
+          <td class="date">2024 – now</td>
+          <td><strong>Institute of Information Engineering, Chinese Academy of Sciences</strong> — Ph.D. student, advised by Prof. Yanbing Liu <span class="loc">· Beijing, China</span></td>
+        </tr>
+        <tr>
+          <td class="logo"><a href="https://www.uwa.edu.au/" target="_blank" rel="noopener"><img src="assets/logos/uwa.svg" alt="The University of Western Australia"></a></td>
+          <td class="date">2021 – 2024</td>
+          <td><strong>The University of Western Australia</strong> — M.S., Computer Science and Software Engineering <span class="loc">· Perth, Australia</span></td>
+        </tr>
+        <tr>
+          <td class="logo"><a href="https://www.curtin.edu.au/" target="_blank" rel="noopener"><img src="assets/logos/curtin.svg" alt="Curtin University"></a></td>
+          <td class="date">2019 – 2021</td>
+          <td><strong>Curtin University</strong> — CS Lab Research, School of Electrical Engineering, Computing and Mathematical Sciences <span class="loc">· Perth, Australia</span></td>
+        </tr>
+      </table>
+    </section>
 
-  <!-- ======================= Education & Experience ======================= -->
-  <section>
-    <h2>Education</h2>
-    <table class="cvlist">
-      <tr>
-        <td class="logo"><a href="https://english.ucas.ac.cn/" target="_blank" rel="noopener"><img class="sq" src="assets/logos/ucas.svg" alt="University of Chinese Academy of Sciences"></a><a href="https://www.iie.ac.cn/" target="_blank" rel="noopener"><img class="sq" src="assets/logos/iie.png" alt="Institute of Information Engineering, CAS"></a></td>
-        <td class="date">2024 – now</td>
-        <td><strong>Institute of Information Engineering, Chinese Academy of Sciences</strong> — Ph.D. student, advised by Prof. Yanbing Liu <span class="loc">· Beijing, China</span></td>
-      </tr>
-      <tr>
-        <td class="logo"><a href="https://www.uwa.edu.au/" target="_blank" rel="noopener"><img src="assets/logos/uwa.svg" alt="The University of Western Australia"></a></td>
-        <td class="date">2021 – 2024</td>
-        <td><strong>The University of Western Australia</strong> — M.S., Computer Science and Software Engineering <span class="loc">· Perth, Australia</span></td>
-      </tr>
-      <tr>
-        <td class="logo"><a href="https://www.curtin.edu.au/" target="_blank" rel="noopener"><img src="assets/logos/curtin.svg" alt="Curtin University"></a></td>
-        <td class="date">2019 – 2021</td>
-        <td><strong>Curtin University</strong> — CS Lab Research, School of Electrical Engineering, Computing and Mathematical Sciences <span class="loc">· Perth, Australia</span></td>
-      </tr>
-    </table>
-  </section>
+    <footer>
+      <!-- TODO: 更新日期改成部署当天 -->
+      Last updated: August 2026 · Hosted on GitHub Pages
+    </footer>
 
-  <!-- ======================= Footer ======================= -->
-  <footer>
-    <!-- TODO: 更新日期改成部署当天 -->
-    Last updated: August 2026 · Hosted on GitHub Pages
-  </footer>
-
+  </div>
 </main>
 </body>
 </html>

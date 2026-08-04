@@ -1,5 +1,6 @@
 /* liuyu 学术主页 · 风格 A 经典极简
-   经典单栏白底学术风：Georgia 衬线 + #1772d0 链接蓝 */
+   排版比例参照 supertyd.github.io/yuedong_tan（顶部导航 + 左名片栏 + 右内容区），
+   视觉风格保持：白底 + Georgia 衬线 + #1772d0 链接蓝 */
 
 * { box-sizing: border-box; }
 
@@ -12,57 +13,117 @@ body {
   line-height: 1.65;
 }
 
-.page {
-  max-width: 720px;
-  margin: 0 auto;
-  padding: 3.5rem 1.25rem 2rem;
-}
-
 a { color: #1772d0; text-decoration: none; }
 a:hover { text-decoration: underline; }
 a:focus-visible { outline: 2px solid #1772d0; outline-offset: 2px; }
 
-/* ---------- Header ---------- */
-.top {
+/* ---------- 顶部导航 ---------- */
+.nav {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, .95);
+  border-bottom: 1px solid #eeeeee;
+  z-index: 10;
+}
+
+.nav-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: .85rem 1.25rem;
   display: flex;
-  gap: 2rem;
   justify-content: space-between;
+  align-items: baseline;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #222222;
+}
+.brand:hover { text-decoration: none; }
+
+.menu a {
+  margin-left: 1.6rem;
+  font-size: .95rem;
+  color: #555555;
+}
+.menu a:hover { color: #1772d0; text-decoration: none; }
+
+/* ---------- 主体两栏 ---------- */
+.page {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 3rem 1.25rem 2rem;
+  display: flex;
+  gap: 3.5rem;
   align-items: flex-start;
 }
 
-.intro { flex: 1; min-width: 0; }
-
-h1 {
-  font-size: 2rem;
-  font-weight: 400;
-  margin: 0 0 1rem;
+/* ---------- 左侧名片栏 ---------- */
+.side {
+  width: 280px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 5.2rem;
 }
-
-h1 .cn {
-  color: #777777;
-  font-size: 1.15rem;
-  margin-left: .4rem;
-}
-
-.intro p { margin: 0 0 .8rem; color: #333333; }
-
-.links { margin-top: .9rem; font-size: .98rem; }
-.links a { margin-right: 1.1rem; }
 
 .portrait {
-  width: 160px;
+  width: 100%;
   height: auto;
-  border-radius: 4px;
-  flex-shrink: 0;
+  border-radius: 8px;
+  display: block;
 }
 
-/* ---------- Sections ---------- */
+.side h1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin: 1.1rem 0 0;
+}
+
+.side .cn {
+  color: #777777;
+  font-size: 1.05rem;
+  margin: .1rem 0 .9rem;
+}
+
+.facts {
+  list-style: none;
+  margin: 0 0 1.2rem;
+  padding: 0;
+  color: #555555;
+  font-size: .92rem;
+}
+.facts li { margin-bottom: .25rem; }
+
+.btns { display: flex; flex-direction: column; gap: .5rem; }
+
+.btns a {
+  display: block;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  padding: .42rem .9rem;
+  font-size: .92rem;
+  text-align: center;
+}
+.btns a:hover {
+  text-decoration: none;
+  border-color: #1772d0;
+  background: #f7faff;
+}
+
+/* ---------- 右侧内容区 ---------- */
+.content { flex: 1; min-width: 0; }
+
+.content section { margin-bottom: 2.6rem; }
+
 h2 {
   font-size: 1.25rem;
   font-weight: 700;
-  margin: 2.4rem 0 .9rem;
+  margin: 0 0 .9rem;
   color: #222222;
 }
+
+.content p { margin: 0 0 .8rem; color: #333333; }
 
 /* ---------- News / CV 列表 ---------- */
 .news, .cvlist { border-collapse: collapse; }
@@ -131,18 +192,20 @@ h2 {
 
 /* ---------- Footer ---------- */
 footer {
-  margin-top: 3.5rem;
+  margin-top: 3rem;
   padding-top: 1rem;
   border-top: 1px solid #e5e5e5;
   font-size: .82rem;
   color: #999999;
 }
 
-/* ---------- Mobile ---------- */
-@media (max-width: 640px) {
-  .page { padding-top: 2rem; }
-  .top { flex-direction: column-reverse; align-items: flex-start; }
-  .portrait { width: 132px; }
+/* ---------- 窄屏 ---------- */
+@media (max-width: 760px) {
+  .page { flex-direction: column; gap: 2rem; padding-top: 2rem; }
+  .side { position: static; width: 100%; max-width: 320px; }
+  .portrait { max-width: 210px; }
+  .btns { max-width: 260px; }
+  .menu a { margin-left: 1rem; }
   .pub { gap: .9rem; }
   .thumb { width: 96px; height: 63px; }
   .cvlist .logo { padding-right: .6rem; }
