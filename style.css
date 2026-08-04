@@ -175,6 +175,11 @@ h2 {
   margin-right: .3rem;
 }
 
+.cvlist .logo img.lg {
+  width: 128px;
+  height: 42px;
+}
+
 .cvlist .loc {
   color: #999999;
   white-space: nowrap;
