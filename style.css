@@ -224,6 +224,8 @@ h2 {
 
 .me { font-weight: 700; text-decoration: underline; }
 
+.newsline { font-size: .96rem; color: #333333; }
+
 /* ---------- Footer ---------- */
 footer {
   margin-top: 3rem;
