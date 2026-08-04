@@ -187,13 +187,14 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
-.publogo {
-  width: 64px;
-  height: 30px;
+.vlogo {
+  height: 15px;
+  width: auto;
+  max-width: 110px;
   object-fit: contain;
-  object-position: left top;
-  flex-shrink: 0;
-  margin-top: .2rem;
+  display: inline-block;
+  vertical-align: -2px;
+  margin-right: .3rem;
 }
 
 .thumb {
@@ -231,7 +232,6 @@ footer {
   .menu a { margin-left: 1rem; }
   .pub { gap: .9rem; }
   .thumb { width: 96px; height: 63px; }
-  .publogo { width: 48px; height: 24px; }
   .cvlist .logo { padding-right: .6rem; }
   .cvlist .logo img { width: 64px; height: 28px; }
   .cvlist .logo img.sq { width: 28px; margin-right: .2rem; }
