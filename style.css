@@ -79,6 +79,19 @@ h2 {
   white-space: nowrap;
 }
 
+.cvlist .logo {
+  padding: .3rem 1rem .3rem 0;
+  vertical-align: middle;
+}
+
+.cvlist .logo img {
+  width: 96px;
+  height: 34px;
+  object-fit: contain;
+  object-position: left center;
+  display: block;
+}
+
 /* ---------- Publications ---------- */
 .pub {
   display: flex;
@@ -119,4 +132,6 @@ footer {
   .portrait { width: 132px; }
   .pub { gap: .9rem; }
   .thumb { width: 96px; height: 63px; }
+  .cvlist .logo { padding-right: .6rem; }
+  .cvlist .logo img { width: 64px; height: 28px; }
 }
