@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="400" viewBox="0 0 320 400">
+  <rect width="320" height="400" fill="#e9e4da"/>
+  <circle cx="160" cy="150" r="62" fill="#c9c1b0"/>
+  <path d="M60 400 C60 300 110 268 160 268 C210 268 260 300 260 400 Z" fill="#c9c1b0"/>
+  <text x="160" y="372" text-anchor="middle" font-family="sans-serif" font-size="20" fill="#a89f8f">照片占位</text>
+</svg>
