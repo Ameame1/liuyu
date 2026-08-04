@@ -180,11 +180,40 @@ h2 {
   white-space: nowrap;
 }
 
-/* ---------- Publications ---------- */
+/* ---------- Publications：时间轴 ---------- */
 .pub {
   display: flex;
-  gap: 1.15rem;
+  gap: 2rem;
   margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.pub::before {
+  content: "";
+  position: absolute;
+  left: 89px;
+  top: 4px;
+  bottom: -1.25rem;
+  width: 2px;
+  background: #e8e8e8;
+}
+
+.pub:last-child::before {
+  bottom: auto;
+  height: 16px;
+}
+
+.pub::after {
+  content: "";
+  position: absolute;
+  left: 90px;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #1772d0;
+  transform: translateX(-50%);
 }
 
 .pdate {
@@ -195,6 +224,7 @@ h2 {
   white-space: nowrap;
   padding-top: .1rem;
   font-variant-numeric: tabular-nums;
+  text-align: right;
 }
 
 .vlogo {
@@ -250,9 +280,11 @@ footer {
   .portrait { max-width: 210px; }
   .btns { max-width: 260px; }
   .menu a { margin-left: 1rem; }
-  .pub { gap: .9rem; }
+  .pub { gap: 1.3rem; }
   .thumb { width: 96px; height: 63px; }
   .pdate { width: 66px; font-size: .85rem; }
+  .pub::before { left: 75px; }
+  .pub::after { left: 76px; }
   .cvlist .logo { padding-right: .6rem; }
   .cvlist .logo img { width: 64px; height: 28px; }
   .cvlist .logo img.sq { width: 28px; margin-right: .2rem; }
