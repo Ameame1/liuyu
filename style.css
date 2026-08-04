@@ -187,6 +187,37 @@ h2 {
   margin-bottom: 1.25rem;
 }
 
+.cal {
+  width: 56px;
+  flex-shrink: 0;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  margin-top: .15rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .06);
+}
+
+.cal-m {
+  display: block;
+  background: #1772d0;
+  color: #ffffff;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: .14rem 0 .1rem;
+}
+
+.cal-y {
+  display: block;
+  background: #ffffff;
+  color: #333333;
+  font-size: .95rem;
+  font-weight: 700;
+  padding: .28rem 0 .3rem;
+  font-variant-numeric: tabular-nums;
+}
+
 .vlogo {
   height: 15px;
   width: auto;
@@ -232,6 +263,8 @@ footer {
   .menu a { margin-left: 1rem; }
   .pub { gap: .9rem; }
   .thumb { width: 96px; height: 63px; }
+  .cal { width: 48px; }
+  .cal-y { font-size: .85rem; }
   .cvlist .logo { padding-right: .6rem; }
   .cvlist .logo img { width: 64px; height: 28px; }
   .cvlist .logo img.sq { width: 28px; margin-right: .2rem; }
