@@ -269,6 +269,7 @@ h2 {
   color: #333333;
   padding: .12rem 0;
 }
+.newslist .nv { color: #222222; }
 .newslist .nd { flex: none; min-width: 4.7em; font-weight: 700; color: #222222; font-variant-numeric: tabular-nums; }
 
 .milogo {
