@@ -304,3 +304,22 @@ footer {
   .cvlist .logo img { width: 64px; height: 28px; }
   .cvlist .logo img.sq { width: 28px; margin-right: .2rem; }
 }
+
+/* ---------- keyword tags ---------- */
+.pub .kw { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 5px; }
+.tag {
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: .72rem; font-weight: 600; letter-spacing: .01em; line-height: 1.6;
+  padding: 0 9px 0 8px; border-radius: 999px; border: 1px solid transparent;
+  display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .75; }
+.tag:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
+.t-a { background: #fff1e6; color: #b04a00; border-color: #ffd9bd; }
+.t-r { background: #e9f2fd; color: #1b5aa6; border-color: #c9defa; }
+.t-l { background: #f1ecfc; color: #5a3db0; border-color: #ddd1f7; }
+.t-m { background: #e4f6f1; color: #17765f; border-color: #c2eadf; }
+.t-s { background: #fdecea; color: #b0301c; border-color: #f7cfc8; }
+.t-c { background: #eaf7e5; color: #2d7a1c; border-color: #cdebc2; }
+.t-d { background: #eef0f9; color: #3a4787; border-color: #d6dbf0; }
