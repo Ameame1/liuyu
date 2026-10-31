@@ -316,10 +316,23 @@ footer {
 }
 .tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .75; }
 .tag:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
-.t-a { background: #fff1e6; color: #b04a00; border-color: #ffd9bd; }
-.t-r { background: #e9f2fd; color: #1b5aa6; border-color: #c9defa; }
-.t-l { background: #f1ecfc; color: #5a3db0; border-color: #ddd1f7; }
-.t-m { background: #e4f6f1; color: #17765f; border-color: #c2eadf; }
-.t-s { background: #fdecea; color: #b0301c; border-color: #f7cfc8; }
-.t-c { background: #eaf7e5; color: #2d7a1c; border-color: #cdebc2; }
-.t-d { background: #eef0f9; color: #3a4787; border-color: #d6dbf0; }
+/* colour = research direction (AI Agent / AI4Science / Data Mining) */
+.k-agent { background: #fff1e6; color: #a34600; border-color: #ffd9bd; }
+.k-science { background: #e4f6f1; color: #15705a; border-color: #c2eadf; }
+.k-data { background: #e9f2fd; color: #1b5aa6; border-color: #c9defa; }
+.dir {
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: .72rem; font-weight: 700; line-height: 1.6; padding: 0 9px; border-radius: 999px; color: #fff; white-space: nowrap;
+}
+.d-agent.dir { background: #b5500e; } .d-science.dir { background: #17765f; } .d-data.dir { background: #2563b8; }
+.dirbar { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 18px; }
+.dirbtn {
+  font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  font-size: .8rem; font-weight: 600; padding: 3px 12px; border-radius: 999px; cursor: pointer;
+  border: 1px solid #d8dde3; background: #fff; color: #333; display: inline-flex; align-items: center; gap: 6px;
+}
+.dirbtn span { font-weight: 700; opacity: .6; }
+.dirbtn.d-agent::before, .dirbtn.d-science::before, .dirbtn.d-data::before { content: ""; width: 8px; height: 8px; border-radius: 50%; }
+.dirbtn.d-agent::before { background: #b5500e; } .dirbtn.d-science::before { background: #17765f; } .dirbtn.d-data::before { background: #2563b8; }
+.dirbtn.on { background: #222; color: #fff; border-color: #222; }
+.dirbtn.on span { opacity: .8; }
