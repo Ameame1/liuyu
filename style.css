@@ -314,12 +314,11 @@ footer {
   display: inline-flex; align-items: center; gap: 5px; white-space: nowrap;
   transition: transform .15s ease, box-shadow .15s ease;
 }
-.tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: .75; }
+.tag::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: currentColor; opacity: .45; }
 .tag:hover { transform: translateY(-1px); box-shadow: 0 2px 6px rgba(0,0,0,.08); }
 /* colour = research direction (AI Agent / AI4Science / Data Mining) */
-.k-agent { background: #fff1e6; color: #a34600; border-color: #ffd9bd; }
-.k-science { background: #e4f6f1; color: #15705a; border-color: #c2eadf; }
-.k-data { background: #e9f2fd; color: #1b5aa6; border-color: #c9defa; }
+/* fine-grained keywords: neutral, colour is reserved for the three directions */
+.k-agent, .k-science, .k-data { background: #f3f4f6; color: #4b5563; border-color: #e5e7eb; }
 .dir {
   font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   font-size: .72rem; font-weight: 700; line-height: 1.6; padding: 0 9px; border-radius: 999px; color: #fff; white-space: nowrap;
