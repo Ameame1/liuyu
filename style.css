@@ -27,7 +27,7 @@ a:focus-visible { outline: 2px solid #1772d0; outline-offset: 2px; }
 }
 
 .nav-inner {
-  max-width: 1140px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: .85rem 1.25rem;
   display: flex;
@@ -51,7 +51,7 @@ a:focus-visible { outline: 2px solid #1772d0; outline-offset: 2px; }
 
 /* ---------- 主体两栏 ---------- */
 .page {
-  max-width: 1140px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 3rem 1.25rem 2rem;
   display: flex;
@@ -324,3 +324,34 @@ footer {
 .dirbtn.d-agent::before { background: #b0612c; } .dirbtn.d-science::before { background: #3b7d5a; } .dirbtn.d-data::before { background: #2f5d9a; }
 .dirbtn.on { background: #222; color: #fff; border-color: #222; }
 .dirbtn.on span { opacity: .8; }
+
+/* ---------- insight figure on the right of each publication ---------- */
+.pub .meta { flex: 1; min-width: 0; }
+.pfig {
+  width: 252px; height: 164px; flex-shrink: 0; align-self: flex-start; margin-top: 3px;
+  display: flex; align-items: center; justify-content: center;
+  padding: 6px; background: #fff; border: 1px solid #ececec; border-radius: 6px;
+  cursor: zoom-in; transition: border-color .15s ease, box-shadow .15s ease;
+}
+.pfig img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; display: block; }
+a.pfig:hover { border-color: #cfd6de; box-shadow: 0 3px 12px rgba(0,0,0,.08); }
+.pfig.nofig { visibility: hidden; }
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; background: rgba(17,17,17,.86);
+  display: none; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+  padding: 3vh 3vw; cursor: zoom-out;
+}
+.lightbox.on { display: flex; }
+.lightbox img { max-width: 94vw; max-height: 84vh; background: #fff; border-radius: 6px; box-shadow: 0 10px 40px rgba(0,0,0,.4); }
+.lightbox p { color: #e8e8e8; font-size: .88rem; max-width: 900px; text-align: center; margin: 0; }
+@media (max-width: 1100px) {
+  .pub { flex-wrap: wrap; row-gap: .7rem; }
+  .pub .meta { flex: 1 1 calc(100% - 76px - 2rem); }
+  .pfig { order: 3; width: auto; height: auto; max-width: 340px; margin-left: calc(76px + 2rem); }
+  .pfig img { max-height: 210px; }
+  .pfig.nofig { display: none; }
+}
+@media (max-width: 760px) {
+  .pub .meta { flex-basis: calc(100% - 66px - 1.3rem); }
+  .pfig { margin-left: calc(66px + 1.3rem); max-width: calc(100% - 66px - 1.3rem); }
+}
