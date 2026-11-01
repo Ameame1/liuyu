@@ -321,9 +321,11 @@ footer {
 .k-agent, .k-science, .k-data { background: #f3f4f6; color: #4b5563; border-color: #e5e7eb; }
 .dir {
   font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  font-size: .72rem; font-weight: 700; line-height: 1.6; padding: 0 9px; border-radius: 999px; color: #fff; white-space: nowrap;
+  font-size: .72rem; font-weight: 700; line-height: 1.6; padding: 0 9px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent;
 }
-.d-agent.dir { background: #b5500e; } .d-science.dir { background: #17765f; } .d-data.dir { background: #2563b8; }
+.d-agent.dir { background: #fbefe6; color: #9c4a14; border-color: #f1d3bd; }
+.d-science.dir { background: #e9f3ec; color: #2e6b47; border-color: #c9e2d1; }
+.d-data.dir { background: #e9eef8; color: #2f4f8f; border-color: #cdd8ee; }
 .dirbar { display: flex; flex-wrap: wrap; gap: 8px; margin: -4px 0 18px; }
 .dirbtn {
   font-family: -apple-system, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
@@ -332,6 +334,6 @@ footer {
 }
 .dirbtn span { font-weight: 700; opacity: .6; }
 .dirbtn.d-agent::before, .dirbtn.d-science::before, .dirbtn.d-data::before { content: ""; width: 8px; height: 8px; border-radius: 50%; }
-.dirbtn.d-agent::before { background: #b5500e; } .dirbtn.d-science::before { background: #17765f; } .dirbtn.d-data::before { background: #2563b8; }
+.dirbtn.d-agent::before { background: #9c4a14; } .dirbtn.d-science::before { background: #2e6b47; } .dirbtn.d-data::before { background: #2f4f8f; }
 .dirbtn.on { background: #222; color: #fff; border-color: #222; }
 .dirbtn.on span { opacity: .8; }
