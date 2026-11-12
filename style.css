@@ -68,7 +68,7 @@ a:focus-visible { outline: 2px solid #1772d0; outline-offset: 2px; }
 }
 
 .portrait {
-  width: 190px;
+  width: 150px;
   height: auto;
   border-radius: 8px;
   display: block;
@@ -292,7 +292,7 @@ footer {
 @media (max-width: 760px) {
   .page { flex-direction: column; gap: 2rem; padding-top: 2rem; }
   .side { position: static; width: 100%; max-width: 320px; }
-  .portrait { max-width: 210px; }
+  .portrait { max-width: 160px; }
   .btns { max-width: 260px; }
   .menu a { margin-left: 1rem; }
   .pub { gap: 1.3rem; }
